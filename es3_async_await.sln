@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "es3_async_await", "es3_async_await\es3_async_await.csproj", "{2D164665-6E4F-4E69-99DA-B2ABBF2E98E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D164665-6E4F-4E69-99DA-B2ABBF2E98E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D164665-6E4F-4E69-99DA-B2ABBF2E98E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D164665-6E4F-4E69-99DA-B2ABBF2E98E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D164665-6E4F-4E69-99DA-B2ABBF2E98E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8003362E-35EA-42B8-A3C2-0AC6D829FD55}
+	EndGlobalSection
+EndGlobal
