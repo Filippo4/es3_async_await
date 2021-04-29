@@ -34,35 +34,33 @@ namespace es3_async_await
             pbr_Progress.Maximum = 100;
             pbr_Progress.Value = 0;
 
-            Task<int> t1 = Task.Factory.StartNew(() => TrovaMultipli(a),
-                CancellationToken.None,
-                TaskCreationOptions.LongRunning,
-                TaskScheduler.Default
-                );
+            TrovaMultipli(a);
         }
 
-        public int TrovaMultipli(int n)
+        public async Task TrovaMultipli(int n)
         {
-            int multipli = 0;
-            for (int c = 0; c < 200000000; c++)
+            await Task.Run(() =>
             {
-                if (c % n == 0)
+                int max = 2000000;
+                int min = 0;
+                for (int i = 1; i <= max; i++)
                 {
-                    multipli++;
-                }
-                if (c % 2000000 == 0)
-                {
-                    pbr_Progress.Dispatcher.Invoke(() =>
+                    if ((i % n) == 0)
                     {
-                        pbr_Progress.Value++;
-                    });
+                        min++;
+                    }
+                    if (i % 2000000 == 0)
+                    {
+                        pbr_Progress.Dispatcher.Invoke(() =>
+                        pbr_Progress.Value++);
+                    };
                 }
-            }
-            lbl_output.Dispatcher.Invoke(() =>
-            {
-                lbl_output.Content = multipli;
+
+                lbl_output.Dispatcher.Invoke(() =>
+                   lbl_output.Content = min
+               );
             });
-            return multipli;
         }
-    }
-}
+
+
+
