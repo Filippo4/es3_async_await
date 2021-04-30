@@ -53,7 +53,7 @@ namespace es3_async_await
                     {
                         pbr_Progress.Dispatcher.Invoke(() =>
                         pbr_Progress.Value++);
-                    };
+                    }
                 }
 
                 lbl_output.Dispatcher.Invoke(() =>
@@ -61,6 +61,25 @@ namespace es3_async_await
                );
             });
         }
+
+        private void btn_calcola_Click(object sender, RoutedEventArgs e)
+        {
+            bool primo=true;
+            int n = int.Parse(txt_Numero.Text);
+            for(int i = 2;i<=n/2;i++)
+            {
+                if (n%i==0)
+                {
+                    primo = false;
+                }
+            }
+             if(primo == false)
+                lbl_risultatoPrimo.Content=$"il numero non è primo!";
+             else
+                lbl_risultatoPrimo.Content = $"il numero è primo!";
+        }
+    }
+}
 
 
 

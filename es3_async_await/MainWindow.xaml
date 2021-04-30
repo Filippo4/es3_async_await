@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:es3_async_await"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="200" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="90"></ColumnDefinition>
@@ -15,23 +15,37 @@
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <Label Content="Numero A:"></Label>
         </StackPanel>
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox x:Name="txt_Numero" Width="90" TextChanged="txt_Numero_TextChanged"></TextBox>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBox x:Name="txt_Numero" Width="90" ></TextBox>
         </StackPanel>
-        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <ProgressBar x:Name="pbr_Progress" Width="180" Height="10"></ProgressBar>
+        <StackPanel Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <ProgressBar x:Name="pbr_Progress" Width="180" Height="15"></ProgressBar>
         </StackPanel>
-        <StackPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Column="3" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <Label Content="Conteggio dei multipli di A:"></Label>
         </StackPanel>
-        <StackPanel Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Left">
+        <StackPanel Grid.Column="4" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Label x:Name="lbl_output" Width="85" Height="37"/>
         </StackPanel>
-        <StackPanel Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Left">
+        <StackPanel Grid.Column="5" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button x:Name="btn_Esegui" Content="Esegui" Width="70" Click="BtnEsegui_Click"></Button>
         </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="E' un numero primo?"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btn_calcola" Content="Calcola numero primo" Click="btn_calcola_Click"></Button>
+        </StackPanel>
+        <StackPanel  Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="lbl_risultatoPrimo"></Label>
+        </StackPanel>
+        
     </Grid>
 </Window>
